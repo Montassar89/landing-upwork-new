@@ -4,6 +4,14 @@ const  Header = () =>{
   const [profile, setProfile] = useState(false);
   const [product, setProduct] = useState(false);
   const [deliverables, setDeliverables] = useState(false);
+  const toggleDeliverables = () =>{
+    setDeliverables(!deliverables)
+    setProduct(false)
+  }
+  const toggleProduct = () =>{
+    setProduct(!product)
+    setDeliverables(false)
+  }
     return (
         <>
             <div className="bg-gray-200 h-full w-full">
@@ -20,14 +28,14 @@ const  Header = () =>{
                                         />
                                     </g>
                                 </svg>
-                                <p className="text-base text-gray-800 ml-3">The Name</p>
+                                <p className="text-base text-gray-800 ml-3 font-extrabold">BOXFUL</p>
 
                             </div>
                             <div className="justify-end hidden xl:flex items-center">
                                 <div className="cursor-pointer inline-flex items-center justify-center rounded-md text-gray-400 hover:text-white focus:outline-none transition duration-150 ease-in-out"></div>
                                 <div className="hidden md:flex items-center justify-center sm:items-stretch sm:justify-start">
                                     <div className="hidden md:flex">
-                                        <a className="mx-5 flex items-center py-6 text-sm leading-5 text-indigo-700 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out relative cursor-pointer" onClick={() => setProduct(!product)}>
+                                        <a className="mx-5 flex items-center py-6 text-sm leading-5 text-indigo-700 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out relative cursor-pointer" onMouseEnter={() => toggleProduct()} onMouseLeave={() => setProduct(false)}>
                                             Our Services
                                             <span className="pl-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -45,7 +53,7 @@ const  Header = () =>{
                                         </a>
                                        
 
-                                        <a className="mx-5 flex items-center py-6 text-sm leading-5 text-indigo-700 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out relative cursor-pointer" onClick={() => setDeliverables(!deliverables)}>
+                                        <a className="mx-5 flex items-center py-6 text-sm leading-5 text-indigo-700 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out relative cursor-pointer" onMouseEnter={() => toggleDeliverables()} onMouseLeave={() => setDeliverables(false)}>
                                             Hong Kong
                                             <span className="pl-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -89,7 +97,7 @@ const  Header = () =>{
                                     fill="#667EEA"
                                 />
                             </svg>
-                            <p className="text-base text-gray-800 ml-3">The Name</p>
+                            <p className="text-base text-gray-800 ml-3 font-extrabold">BOXFUL</p>
                         </div>
                         <div>
                             <div id="menu" className="text-gray-800" onClick={() => setShow(!show)}>
@@ -124,7 +132,7 @@ const  Header = () =>{
                                                             fill="#667EEA"
                                                         />
                                                     </svg>
-                                                    <p className="text-base text-gray-800 ml-3">The Name</p>
+                                                    <p className="text-base text-gray-800 ml-3 font-extrabold">BOXFUL</p>
                                                 </div>
                                                 <div id="cross" className=" text-gray-800" onClick={() => setShow(!show)}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-x" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -149,14 +157,14 @@ const  Header = () =>{
                                                             <p className="text-indigo-700 xl:text-base md:text-2xl text-base ml-3">Our Services</p>
                                                         </div>
                                                         {product ? (
-                                                            <div onClick={() => setProduct(!product)}>
+                                                            <div onClick={() => toggleProduct()} >
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <polyline points="6 15 12 9 18 15" />
                                                                 </svg>
                                                             </div>
                                                         ) : (
-                                                            <div onClick={() => setProduct(!product)}>
+                                                            <div onClick={() => toggleProduct()}>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <polyline points="6 9 12 15 18 9" />
@@ -189,14 +197,14 @@ const  Header = () =>{
                                                             <p className="text-indigo-700 xl:text-base md:text-2xl text-base ml-3">Hong Kong</p>
                                                         </div>
                                                         {deliverables ? (
-                                                            <div onClick={() => setDeliverables(!deliverables)}>
+                                                            <div onClick={() => toggleDeliverables()}>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <polyline points="6 15 12 9 18 15" />
                                                                 </svg>
                                                             </div>
                                                         ) : (
-                                                            <div onClick={() => setDeliverables(!deliverables)}>
+                                                            <div onClick={() => toggleDeliverables()}>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <polyline points="6 9 12 15 18 9" />

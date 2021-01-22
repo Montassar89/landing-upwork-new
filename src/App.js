@@ -14,7 +14,7 @@ const App = ({ Component }) => {
       <Header />
       {/* <Banner /> */}
       {/* <Section /> */}
-      {/* <Ban /> */}
+      <Ban />
       {/* <Card /> */}
       {/* <DownloadApp /> */}
       <Testimonials />
