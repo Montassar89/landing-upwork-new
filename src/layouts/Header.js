@@ -74,7 +74,7 @@ const  Header = () =>{
                                         <a className="mx-5 py-6 block text-sm leading-5 text-gray-800  hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out cursor-pointer">
                                             7458 5842
                                         </a>
-                                        <a href="javascript:void(0);" className="flex items-center justify-center px-5 py-3 
+                                        <a href="https://www.google.com/" className="flex items-center justify-center px-5 py-3 
                                         border border-transparent text-base font-medium rounded-full text-white bg-yellow-500 hover:bg-yellow-600 h-10 m-auto">
                                           BOOK NOW
                                         </a>

@@ -9,12 +9,12 @@ const Section = ({ title }) => {
         </h2>
         <div className="mt-8 lex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
-            <a href="javascript:void(0);" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+            <a href="https://www.google.com/" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
               Get started
             </a>
           </div>
           <div className="ml-3 inline-flex rounded-md shadow">
-            <a href="javascript:void(0);" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+            <a href="https://www.google.com/" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
               Learn more
             </a>
           </div>
