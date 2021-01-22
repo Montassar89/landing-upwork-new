@@ -7,6 +7,7 @@ import Section from './components/Section';
 import Card from './components/Card';
 import DownloadApp from './components/DownloadApp';
 import Testimonials from './components/Testimonials';
+
 const App = ({ Component }) => {
   return (
     <div className="main">
